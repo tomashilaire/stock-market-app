@@ -1,3 +1,6 @@
 package com.plcoding.stockmarketapp.presentation.company_listing
 
-sealed class CompanyListingEvents
+sealed class CompanyListingsEvents {
+    object Refresh: CompanyListingsEvents()
+    data class OnSearchQueryChange(val query:String): CompanyListingsEvents()
+}

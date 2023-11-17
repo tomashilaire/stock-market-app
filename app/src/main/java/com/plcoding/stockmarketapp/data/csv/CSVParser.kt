@@ -1,4 +1,7 @@
 package com.plcoding.stockmarketapp.data.csv
 
-interface CSVParser {
+import java.io.InputStream
+
+interface CSVParser <T> {
+    suspend fun parse( stream: InputStream): List<T>
 }
